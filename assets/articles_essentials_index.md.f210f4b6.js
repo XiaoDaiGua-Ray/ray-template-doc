@@ -1,0 +1,27 @@
+import{_ as s,c as n,o as a,a as e}from"./app.11c27c29.js";const C=JSON.parse('{"title":"介绍","description":"","frontmatter":{},"headers":[{"level":2,"title":"特征","slug":"特征","link":"#特征","children":[{"level":3,"title":"开箱即用","slug":"开箱即用","link":"#开箱即用","children":[]},{"level":3,"title":"开发体验","slug":"开发体验","link":"#开发体验","children":[]}]},{"level":2,"title":"功能","slug":"功能","link":"#功能","children":[]}],"relativePath":"articles/essentials/index.md","lastUpdated":null}'),l={name:"articles/essentials/index.md"},p=e(`<h1 id="介绍" tabindex="-1">介绍 <a class="header-anchor" href="#介绍" aria-hidden="true">#</a></h1><blockquote><p><a href="https://xiaodaigua-ray.github.io/" target="_blank" rel="noreferrer">ray-template</a> 是一个后台前端解决方案，它基于 <a href="https://cn.vuejs.org/" target="_blank" rel="noreferrer">vue3.x</a>、<a href="https://cn.vitejs.dev/" target="_blank" rel="noreferrer">vite3.2</a>、<a href="https://www.naiveui.com/zh-CN/light" target="_blank" rel="noreferrer">naive-ui</a>、<a href="https://www.typescriptlang.org/" target="_blank" rel="noreferrer">typescript</a> 实现。它使用了最新的前端技术栈，内置了 <a href="https://github.com/intlify/vue-i18n-next" target="_blank" rel="noreferrer">vue-i18n</a> 国际化解决方案，动态路由，提炼了典型的业务模型，提供了丰富的功能组件，它可以帮助你快速搭建企业级中后台产品原型。相信不管你的需求是什么，本项目都能帮助到你。</p></blockquote><h2 id="特征" tabindex="-1">特征 <a class="header-anchor" href="#特征" aria-hidden="true">#</a></h2><h3 id="开箱即用" tabindex="-1">开箱即用 <a class="header-anchor" href="#开箱即用" aria-hidden="true">#</a></h3><p>仅需几步操作，即可进行业务开发。配置了大量热门工具库，让你能够愉快的进行搬砖。</p><ul><li>预配置丰富工具库</li><li>经典业务模型提炼</li><li>常用功能组件封装</li></ul><h3 id="开发体验" tabindex="-1">开发体验 <a class="header-anchor" href="#开发体验" aria-hidden="true">#</a></h3><ul><li>配置 <code>reactivityTransform</code> 让你轻松使用响应式方法（比如 <code>ref</code>），轻松进行响应式解构</li><li>配置自动导入，解放双手（全局直接使用 <code>vue hook</code>、<code>@vueuse hook</code> 等方法，具体配置可在 <code>vite.config.ts</code> 添加)</li><li>使用 <code>tsx</code> 进行组件开发，拥抱 hook</li><li>全量使用 <code>typescript</code> 进行开发</li></ul><h2 id="功能" tabindex="-1">功能 <a class="header-anchor" href="#功能" aria-hidden="true">#</a></h2><div class="language- line-numbers-mode"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki material-palenight"><code><span class="line"><span style="color:#A6ACCD;">- 登陆 / 注销</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">- 全局功能</span></span>
+<span class="line"><span style="color:#A6ACCD;">  - 国际化多语言</span></span>
+<span class="line"><span style="color:#A6ACCD;">  - 多种动态换肤</span></span>
+<span class="line"><span style="color:#A6ACCD;">  - 动态侧边栏（支持多级路由嵌套）</span></span>
+<span class="line"><span style="color:#A6ACCD;">  - 明暗主题切换</span></span>
+<span class="line"><span style="color:#A6ACCD;">  - 快捷导航(标签页)</span></span>
+<span class="line"><span style="color:#A6ACCD;">  - svg 图标</span></span>
+<span class="line"><span style="color:#A6ACCD;">  - 全屏操作</span></span>
+<span class="line"><span style="color:#A6ACCD;">  - 自适应收缩侧边栏</span></span>
+<span class="line"><span style="color:#A6ACCD;">  - 局部刷新（刷新内容区域）</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">- 错误页</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">- 组件（后续会有详细组件介绍）</span></span>
+<span class="line"><span style="color:#A6ACCD;">  - RayChart（可视化组件）</span></span>
+<span class="line"><span style="color:#A6ACCD;">  - RayCollapseGrid（折叠操作栏）</span></span>
+<span class="line"><span style="color:#A6ACCD;">  - RayIcon（svg 图标）</span></span>
+<span class="line"><span style="color:#A6ACCD;">  - RayTable（数据表格）</span></span>
+<span class="line"><span style="color:#A6ACCD;">  - RayTransitionComponent（过渡动画路由，跟 RouterView 功能相同）</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">- 综合</span></span>
+<span class="line"><span style="color:#A6ACCD;">  - 请求方法</span></span>
+<span class="line"><span style="color:#A6ACCD;">  - 常用 hook 方法</span></span>
+<span class="line"><span style="color:#A6ACCD;">  - typescript 签名</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre><div class="line-numbers-wrapper" aria-hidden="true"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br></div></div>`,10),r=[p];function i(c,t,o,d,b,u){return a(),n("div",null,r)}const A=s(l,[["render",i]]);export{C as __pageData,A as default};
