@@ -1,0 +1,21 @@
+{
+  "name": "ray-template-doc",
+  "version": "1.0.0",
+  "description": "ray template doc",
+  "main": "index.ts",
+  "author": "Ray <https://github.com/XiaoDaiGua-Ray>",
+  "license": "MIT",
+  "scripts": {
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
+  },
+  "devDependencies": {
+    "vitepress": "^1.0.0-alpha.33",
+    "vue": "^3.2.45"
+  },
+  "dependencies": {
+    "markdown-it-anchor": "^8.6.6",
+    "naive-ui": "^2.34.3"
+  }
+}
