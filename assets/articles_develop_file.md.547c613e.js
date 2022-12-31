@@ -1,0 +1,17 @@
+import{_ as s,c as n,o as a,a as e}from"./app.026718be.js";const A=JSON.parse('{"title":"项目文件结构","description":"","frontmatter":{},"headers":[{"level":2,"title":"文件结构说明","slug":"文件结构说明","link":"#文件结构说明","children":[]}],"relativePath":"articles/develop/file.md","lastUpdated":1672305425000}'),l={name:"articles/develop/file.md"},p=e(`<h1 id="项目文件结构" tabindex="-1">项目文件结构 <a class="header-anchor" href="#项目文件结构" aria-hidden="true">#</a></h1><h2 id="文件结构说明" tabindex="-1">文件结构说明 <a class="header-anchor" href="#文件结构说明" aria-hidden="true">#</a></h2><div class="language- line-numbers-mode"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki material-palenight"><code><span class="line"><span style="color:#A6ACCD;">- locales 国际化多语言（本项目采用 json 格式）</span></span>
+<span class="line"><span style="color:#A6ACCD;">- vite-plugin 项目插件封装方法（可根据自身情况进行补充）</span></span>
+<span class="line"><span style="color:#A6ACCD;">- postcss.config.cjs postcss 配置</span></span>
+<span class="line"><span style="color:#A6ACCD;">- cfg.ts vite.config.ts 配置</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre><div class="line-numbers-wrapper" aria-hidden="true"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><div class="info custom-block"><p class="custom-block-title">INFO</p><p>以上文件都是项目打包、插件的一些配置文件，可根据自己实际业务情况进行拓展补充。</p></div><div class="language- line-numbers-mode"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki material-palenight"><code><span class="line"><span style="color:#A6ACCD;">- assets 静态文件入口（字体、图片等）</span></span>
+<span class="line"><span style="color:#A6ACCD;">- axios 请求方法入口（包括 axios 拦截器封装、全局接口管理）</span></span>
+<span class="line"><span style="color:#A6ACCD;">- conponents 全局组件</span></span>
+<span class="line"><span style="color:#A6ACCD;">- icons svg 图标（配合 RayIcon 使用）</span></span>
+<span class="line"><span style="color:#A6ACCD;">- language i18n 入口</span></span>
+<span class="line"><span style="color:#A6ACCD;">- layout 全局布局管理</span></span>
+<span class="line"><span style="color:#A6ACCD;">- router 路由</span></span>
+<span class="line"><span style="color:#A6ACCD;">- store 仓库（pinia）</span></span>
+<span class="line"><span style="color:#A6ACCD;">- styles 全局样式</span></span>
+<span class="line"><span style="color:#A6ACCD;">- types 全局类型</span></span>
+<span class="line"><span style="color:#A6ACCD;">- utils 工具包</span></span>
+<span class="line"><span style="color:#A6ACCD;">- views 页面入口</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre><div class="line-numbers-wrapper" aria-hidden="true"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><div class="tip custom-block"><p class="custom-block-title">TIP</p><p>项目约定按照该结构进行管理，细化颗粒度。建议开发按照该结构进行二次开发。</p></div>`,6),c=[p];function i(r,o,t,d,b,u){return a(),n("div",null,c)}const m=s(l,[["render",i]]);export{A as __pageData,m as default};
