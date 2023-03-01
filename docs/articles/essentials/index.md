@@ -14,10 +14,12 @@
 
 ### 开发体验
 
-- 配置 `reactivityTransform` 让你轻松使用响应式方法（比如 `ref`），轻松进行响应式解构
+- 配置 [reactivityTransform](https://github.com/vuejs/core/tree/main/packages/reactivity-transform) 让你轻松使用响应式方法（比如 `ref`），轻松进行响应式解构
 - 配置自动导入，解放双手（全局直接使用 `vue hook`、`@vueuse hook` 等方法，具体配置可在 `vite.config.ts` 添加)
 - 使用 `tsx` 进行组件开发，拥抱 hook
 - 全量使用 `typescript` 进行开发
+- 极致的 `HMR` 速度
+- 开箱即用的 [构建优化](/articles/advanced/optimization.html) 配置
 
 ## 功能
 
@@ -48,4 +50,5 @@
   - 请求方法
   - 常用 hook 方法
   - typescript 签名
+  - 动态路由
 ```

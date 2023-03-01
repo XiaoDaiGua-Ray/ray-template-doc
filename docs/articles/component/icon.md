@@ -1,4 +1,4 @@
-# 数据表格 Ray Icon
+# SVG 图表 Ray Icon
 
 ## 介绍
 

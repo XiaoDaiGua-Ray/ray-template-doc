@@ -5,7 +5,7 @@ export default defineConfig({
   title: 'Ray Template Doc',
   description: 'Ray Template Doc',
   lastUpdated: true,
-  head: [['link', { rel: 'icon', href: '/icons/ray.svg' }]],
+  head: [['link', { rel: 'icon', href: '/ray-template-doc/icons/ray.svg' }]],
   themeConfig: {
     siteTitle: 'Ray Template',
     logo: '/icons/ray.svg',
@@ -64,12 +64,20 @@ export default defineConfig({
             link: '/articles/develop/file.md',
           },
           {
+            text: '项目配置',
+            link: '/articles/develop/setting.md',
+          },
+          {
             text: '布局',
             link: '/articles/develop/layout.md',
           },
           {
-            text: '新增 view 页面',
+            text: '新增 view 页面（路由）',
             link: '/articles/develop/add-view.md',
+          },
+          {
+            text: '导航栏（菜单）',
+            link: '/articles/develop/menu.md',
           },
           {
             text: '样式',
@@ -97,27 +105,27 @@ export default defineConfig({
         text: '组件',
         items: [
           {
-            text: '可视化图（echart）',
+            text: '可视化图（Echart）',
             link: '/articles/component/chart.md',
           },
           {
-            text: '数据表格',
+            text: '数据表格（Table）',
             link: '/articles/component/table.md',
           },
           {
-            text: '可折叠操作栏',
+            text: '可折叠操作栏（CollapseGrid）',
             link: '/articles/component/collapse-grid.md',
           },
           {
-            text: 'svg 图标',
+            text: 'svg 图标（Icon）',
             link: '/articles/component/icon.md',
           },
           {
-            text: '提示框图表',
+            text: '提示框图表（IconTooltip）',
             link: '/articles/component/tooltip-icon.md',
           },
           {
-            text: '过渡效果路由',
+            text: '过渡效果路由（TransitionComponent）',
             link: '/articles/component/transition-component.md',
           },
         ],
@@ -125,6 +133,10 @@ export default defineConfig({
       {
         text: '进阶',
         items: [
+          {
+            text: '项目优化',
+            link: '/articles/advanced/optimization.md',
+          },
           {
             text: 'CDN',
             link: '/articles/advanced/cdn.md',

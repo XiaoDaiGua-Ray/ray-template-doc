@@ -1,6 +1,10 @@
 # 插件检查
 
-> [vite-plugin-inspect](https://github.com/antfu/vite-plugin-inspect) 可以检查 `vite` 中间件的状态，可以用于调试和编写插件。
+> [vite-plugin-inspect](https://github.com/antfu/vite-plugin-inspect) 可以检查 `vite` 中间件的状态，可以用于调试和编写插件。启动项目时会自动启动。
+
+```
+Inspect: http://localhost:9527/__inspect/
+```
 
 ## 检查转换
 
