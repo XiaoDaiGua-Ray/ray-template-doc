@@ -138,6 +138,10 @@ export default defineConfig({
                   link: '/ray-template-docs/dev/config.md',
                 },
                 {
+                  text: '特殊约定',
+                  link: '/ray-template-docs/dev/regulation.md',
+                },
+                {
                   text: '路由',
                   link: '/ray-template-docs/dev/router.md',
                 },
@@ -182,6 +186,10 @@ export default defineConfig({
                   text: '请求',
                   link: '/ray-template-docs/dev/axios.md',
                 },
+                {
+                  text: 'utils 工具包',
+                  link: '/ray-template-docs/dev/utils.md',
+                },
               ],
             },
             {
@@ -206,6 +214,10 @@ export default defineConfig({
                 {
                   text: 'husky（git 钩子）',
                   link: '/ray-template-docs/advanced/husky.md',
+                },
+                {
+                  text: 'mock 数据',
+                  link: '/ray-template-docs/advanced/mock.md',
                 },
               ],
             },
