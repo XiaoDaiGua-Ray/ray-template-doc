@@ -33,7 +33,7 @@ request<unknown>({
   url: 'https://jsonplaceholder.typicode.com/todos/1',
   method: 'get',
   cancelConfig: {
-    needCancel: true, // [!code hl]
+    needCancel: true,
   },
 })
 
@@ -44,7 +44,7 @@ useRequest<{
     url: 'https://jsonplaceholder.typicode.com/todos/1',
     method: 'get',
     cancelConfig: {
-      needCancel: true, // [!code hl]
+      needCancel: true,
     },
   },
   {

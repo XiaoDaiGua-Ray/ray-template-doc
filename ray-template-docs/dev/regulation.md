@@ -2,9 +2,9 @@
 
 ## props 与 emit
 
-在开发过程中，经常会出现许多时候需要自定义事件的情况，但是在 `vue3.3` 版本以前对于 `emit` 自定义事件的类型提示支持很差（但是事实上，在 `vue3.3` 版本后，也只是对于 `setup` 开发模式支持而已），所以在项目中约定使用 `props` 代替 `emit` 自定义事件的使用。
+在开发过程中，经常会出现许多时候需要自定义事件的情况，但是在 `vue3.3` 版本以前对于 emit 自定义事件的类型提示支持很差（但是事实上，在 `vue3.3` 版本后，也只是对于 setup 开发模式支持而已），所以在项目中约定使用 `props` 代替 `emit` 自定义事件的使用。
 
-使用 `props` 作为自定义事件这个操作并不是特立独行，在很多出名的 `ui` 库都采用了该方式，例如 `naive ui` 就是采用的方法。下面就演示如何使用该技巧：
+使用 props 作为自定义事件这个操作并不是特立独行，在很多出名的 `ui` 库都采用了该方式，例如 `naive ui` 就是采用的方法。下面就演示如何使用该技巧：
 
 ```tsx
 import { call } from '@/utils/vue/index'
@@ -62,7 +62,7 @@ const MyComponent = defineComponent({
 export default MyComponent
 ```
 
-这样写，你不仅仅可以在模板中使用 `@click` `@update:value` 形式调用方法，也可以在 jsx 中使用 `onClick` `onUpdateValue` 形式调用。并且，也可以得到良好的类型提示。
+这样写，你不仅仅可以在模板中使用 `@click @update:value` 形式调用方法，也可以在 `jsx` 中使用 `onClick` `onUpdateValue` 形式调用。并且，也可以得到良好的类型提示。
 
 ## 解耦与聚合
 
