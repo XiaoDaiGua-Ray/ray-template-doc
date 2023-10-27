@@ -60,3 +60,7 @@ useRequest<{
 ## AppStyleProvider
 
 样式注入与加载动画的管理。会在 `body` 注入 `class` `css var` 等。
+
+## AppWatermarkProvider
+
+水印注入组件。
