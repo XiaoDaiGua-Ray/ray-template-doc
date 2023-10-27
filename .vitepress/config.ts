@@ -35,6 +35,15 @@ export default defineConfig({
         link: '/ray-template-docs/guide/why.md',
       },
       {
+        text: '插件集合',
+        items: [
+          {
+            text: 'vscode',
+            link: '/plugin/vscode/ai/index.md',
+          },
+        ],
+      },
+      {
         text: '在线预览',
         items: [
           {
@@ -48,11 +57,15 @@ export default defineConfig({
         ],
       },
       {
-        text: '插件集合',
+        text: '项目',
         items: [
           {
-            text: 'vscode',
-            link: '/plugin/vscode/ai/index.md',
+            text: 'ray-template',
+            link: 'https://github.com/XiaoDaiGua-Ray/ray-template',
+          },
+          {
+            text: 'vue-hooks-plus',
+            link: 'https://github.com/InhiblabCore/vue-hooks-plus',
           },
         ],
       },
@@ -65,7 +78,7 @@ export default defineConfig({
         items: [
           {
             text: 'yun',
-            link: 'https://me.yka.moe/ ',
+            link: 'https://me.yka.moe/',
           },
           {
             text: 'yun git',
