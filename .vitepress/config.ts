@@ -22,7 +22,12 @@ export default defineConfig({
       label: '简体中文',
     },
   },
+
   themeConfig: {
+    outline: 'deep',
+    search: {
+      provider: 'local',
+    },
     footer: {
       message: 'Released under the MIT License.',
       copyright: 'Copyright © 2022-present Ray',
@@ -126,6 +131,10 @@ export default defineConfig({
                   link: '/ray-template-docs/guide/why.md',
                 },
                 {
+                  text: '核心理念',
+                  link: '/ray-template-docs/guide/concept.md',
+                },
+                {
                   text: '开始',
                   link: '/ray-template-docs/guide/setup.md',
                 },
@@ -155,8 +164,8 @@ export default defineConfig({
                   link: '/ray-template-docs/dev/regulation.md',
                 },
                 {
-                  text: '路由',
-                  link: '/ray-template-docs/dev/router.md',
+                  text: '鉴权',
+                  link: '/ray-template-docs/dev/auth.md',
                 },
                 {
                   text: '菜单',
@@ -181,7 +190,16 @@ export default defineConfig({
                 },
                 {
                   text: '状态管理器',
-                  link: '/ray-template-docs/dev/pinia.md',
+                  items: [
+                    {
+                      text: 'pinia 状态管理器',
+                      link: '/ray-template-docs/dev/data-state/pinia.md',
+                    },
+                    {
+                      text: 'global variable 状态管理器',
+                      link: '/ray-template-docs/dev/data-state/global-variable.md',
+                    },
+                  ],
                 },
                 {
                   text: '国际化',
@@ -208,6 +226,23 @@ export default defineConfig({
             {
               text: '进阶',
               items: [
+                {
+                  text: '常用 hooks',
+                  items: [
+                    {
+                      text: '全局 hooks',
+                      link: '/ray-template-docs/advanced/hooks/app.md',
+                    },
+                    {
+                      text: '模板专属 hooks',
+                      link: '/ray-template-docs/advanced/hooks/template.md',
+                    },
+                  ],
+                },
+                {
+                  text: '自定义 echart 主题',
+                  link: '/ray-template-docs/advanced/echart-themes.md',
+                },
                 {
                   text: 'reactivityTransform 功能（已废弃）',
                   link: '/ray-template-docs/advanced/reactivity.md',

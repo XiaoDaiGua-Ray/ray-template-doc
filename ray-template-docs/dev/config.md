@@ -1,10 +1,10 @@
 # 项目配置项
 
 :::tip 备注
-项目的配置区分为 `cfg` 与 `appConfig` 两种。`cfg` 依赖 `appConfig` 下的配置。所有配置项都提供了完整的类型。
+项目的配置区分为 `cfg` 与 `appConfig` 两种。`cfg` 依赖 `appConfig` 下的配置。所有配置项都提供了完整的类型。该配置项文档可能会落后于项目实际开放的配置能力，请以实际项目为准。
 :::
 
-## cfg.ts 配置项
+# cfg.ts 配置项
 
 > 该配置项有一些属性会被暴露给全局，可以使用 `__APP_CFG__` 访问。
 
@@ -105,11 +105,9 @@ const config: AppConfigExport = {
 }
 ```
 
-## appConfig 配置项
+## appConfig 系统配置
 
-- ## appConfig 系统配置
-
-- ## 路由缓存
+### 路由缓存
 
 ```ts
 export const APP_KEEP_ALIVE: Readonly<AppKeepAlive> = {
@@ -119,7 +117,7 @@ export const APP_KEEP_ALIVE: Readonly<AppKeepAlive> = {
 }
 ```
 
-- ## 首屏加载信息
+### 首屏加载信息
 
 ```ts
 export const PRE_LOADING_CONFIG: PreloadingConfig = {
@@ -129,7 +127,7 @@ export const PRE_LOADING_CONFIG: PreloadingConfig = {
 }
 ```
 
-- ## 配置根页面（不可省略）
+### 配置根页面（不可省略）
 
 ```ts
 export const ROOT_ROUTE: Readonly<RootRoute> = {
@@ -142,7 +140,7 @@ export const ROOT_ROUTE: Readonly<RootRoute> = {
 该项目所有重定向至首页，都依赖该配置项。如果修改了该项目的首页路由配置，需要更改该配置项，以免重定向首页操作出现错误。
 :::
 
-- ## 菜单标题
+### 菜单标题
 
 ```ts
 export const SIDE_BAR_LOGO: LayoutSideBarLogo = {
@@ -153,7 +151,7 @@ export const SIDE_BAR_LOGO: LayoutSideBarLogo = {
 }
 ```
 
-- ## 菜单风格配置项
+### 菜单风格配置项
 
 ```ts
 export const APP_MENU_CONFIG: Readonly<AppMenuConfig> = {
@@ -165,7 +163,7 @@ export const APP_MENU_CONFIG: Readonly<AppMenuConfig> = {
 }
 ```
 
-- ## 预设 catch key
+### 预设 catch key
 
 ```ts
 export const APP_CATCH_KEY = {
@@ -175,9 +173,9 @@ export const APP_CATCH_KEY = {
 } as const
 ```
 
-- ## designConfig 配置项
+## designConfig 配置项
 
-- ## 主题配置
+### 主题配置
 
 ````ts
 export const APP_THEME: AppTheme = {
@@ -230,9 +228,9 @@ export const APP_THEME: AppTheme = {
 }
 ````
 
-- ## localConfig 配置项
+## localConfig 配置项
 
-- ## 国际化下拉框配置
+### 国际化下拉框配置
 
 ```ts
 export const LOCAL_OPTIONS: AppLocalesDropdownMixedOption[] = [
@@ -251,13 +249,13 @@ export const LOCAL_OPTIONS: AppLocalesDropdownMixedOption[] = [
 语言包语种添加后，需要在此文件配置语言包。该配置中的 key 也会影响 naiveLocales 方法，配置后请仔细核对一下。添加新的语言包后，如果需要其类型提示，需要在 CurrentAppMessages 中添加新的类型。
 :::
 
-- ## 默认语言
+### 默认语言
 
 ```ts
 export const SYSTEM_DEFAULT_LOCAL = 'zh-CN' // 配置时应该与 LOCAL_OPTIONS 的 key 一致
 ```
 
-- ## dayjs 国际化映射配置项
+### dayjs 国际化映射配置项
 
 ```ts
 /**
@@ -273,9 +271,9 @@ export const DAYJS_LOCAL_MAP: DayjsLocalMap = {
 }
 ```
 
-- ## requestConfig 配置项
+## requestConfig 配置项
 
-- ## axios 公共配置项
+### axios 公共配置项
 
 ```ts
 import type { AxiosConfig } from '@/types/modules/appConfig'
@@ -291,9 +289,9 @@ export const AXIOS_CONFIG: AxiosConfig = {
 }
 ```
 
-- ## routerConfig 配置项
+## routerConfig 配置项
 
-- ## 内容区域 ref 注册
+### 内容区域 ref 注册
 
 ````ts
 /**
@@ -314,20 +312,20 @@ export const AXIOS_CONFIG: AxiosConfig = {
 export const LAYOUT_CONTENT_REF = ref<LayoutInst>()
 ````
 
-- ## 是否启用路由切换时顶部加载条动画
+### 是否启用路由切换时顶部加载条动画
 
 ```ts
 export const SETUP_ROUTER_LOADING_BAR = true
 ```
 
-- ## 是否启用路由守卫
+### 是否启用路由守卫
 
 ```ts
 /** 是否启用路由守卫, 如果设置为 false 则不会触发路由切换校验 */
 export const SETUP_ROUTER_GUARD = true
 ```
 
-- ## 白名单
+### 白名单
 
 ```ts
 /**
@@ -342,7 +340,7 @@ export const SETUP_ROUTER_GUARD = true
 export const WHITE_ROUTES: string[] = ['RLogin', 'ErrorPage', 'RayTemplateDoc']
 ```
 
-- ## 超级管理员
+### 超级管理员
 
 ```ts
 /**
