@@ -1,59 +1,83 @@
 # 模板专属 hooks
 
 :::warning
-以下所有方法仅限于 `Layout` 中使用。如果需要在其他的页面使用，请确保已经完成了整个 `AppMenu` 的初始化。
+以下部分方法仅限于 `Layout` 中使用。如果需要在其他的页面使用，请确保已经完成了整个 `AppMenu` 的初始化。
 :::
 
-## useAppMenu
+## useAppNavigation
 
 ### navigationTo
 
-导航方法，独立于 `router` 的跳转方式。
+区别于 `vue-router` 的导航方式。使用 `useAppNavigation` 可以便捷的进行指定菜单索引、菜单具体项进行导航。
 
 ```ts
-const { navigationTo } = useAppMenu()
+import { useAppNavigation } from '@/hooks/template'
 
-/**
- *
- * 传递菜单索引
- * 会直接导航当前菜单索引位置为 0 的地方
- *
- * 如果导航至的菜单项并非为 root 根菜单，则会递归查找第一级子菜单并且跳转
- */
-navigationTo(0)
+const { navigationTo } = useAppNavigation()
 
-/**
- *
- * 传递菜单项
- * 会直接导航至该项
- */
-navigationTo({ AppMenuOption })
+navigationTo(1) // 导航到第二个菜单
+navigationTo({ AppMenuOption }) // 导航到第二个菜单的第三个子菜单
 ```
 
-## useMainPage
+## useAppRoot
 
-### reload
+### getRootRoute, getRootPath, getRootName
 
-刷新当前路由，并且延迟 `1s`。
+获取模 Root Route 信息。模板维护 `RootRoute` 以实现全局统一的重定向或者其他边界情况处理的需求。
 
 ```ts
-const { reload } = useMainPage()
+import { useAppRoot } from '@/hooks/template'
 
-reload(1000)
+const { getRootRoute, getRootPath, getRootName } = useAppRoot()
+
+getRootRoute() // 获取 Root Route
+getRootPath() // 获取 Root Path
+getRootName() // 获取 Root Name
+```
+
+### setRootRoute
+
+更新模板维护的 `RootRoute` 信息。
+
+```ts
+import { useAppRoot } from '@/hooks/template'
+
+const { setRootRoute } = useAppRoot()
+
+setRootRoute({ path: '/new-root-path' }) // 更新 Root Route
+setRootRoute({ name: 'new-root-name' }) // 更新 Root Route
+setRootRoute({ path: '/new-root-path', name: 'new-root-name' }) // 更新 Root Route
+```
+
+## useMaximize
+
+### isLayoutContentMaximized
+
+获取当前 `Layout` 的内容区域是否处于最大化状态。
+
+```ts
+import { useMaximize } from '@/hooks/template'
+
+const { isLayoutContentMaximized } = useMaximize()
+
+;(isLayoutContentMaximized) => true // 当前 Layout 的内容区域处于最大化状态
+;(isLayoutContentMaximized) => false // 当前 Layout 的内容区域处于正常尺寸状态
 ```
 
 ### maximize
 
-最大化 `LayoutContent` 区域。
+将当前 `Layout` 的内容区域最大化。
 
 ```ts
-const { maximize } = useMainPage()
+import { useMaximize } from '@/hooks/template'
 
-maximize(true) // 最大化
-maximize(false) // 取消最大化
+const { maximize } = useMaximize()
+
+maximize(true) // 将当前 Layout 的内容区域最大化
+maximize(false) // 将当前 Layout 的内容区域恢复正常尺寸
 ```
 
-## useMenuTag
+## useSiderBar
 
 所有的关闭方法，都支持传递：标签页的 `key`、索引、具体标签项。
 
@@ -62,7 +86,7 @@ maximize(false) // 取消最大化
 获取当前激活的标签页索引。
 
 ```ts
-const { getCurrentTagIndex } = useMenuTag()
+const { getCurrentTagIndex } = useSiderBar()
 
 getCurrentTagIndex()
 ```
@@ -72,7 +96,7 @@ getCurrentTagIndex()
 关闭当前标签页。
 
 ```ts
-const { close } = useMenuTag()
+const { close } = useSiderBar()
 
 close(1) // 关闭索引位置为 `1` 的标签页
 close('/echart') // 关闭 key 为 `/echart` 的标签页
@@ -84,7 +108,7 @@ close({ MenuTagOptions }) // 关闭具体标签页项
 关闭所有标签页。然后导航至 root path 页面。
 
 ```ts
-const { closeAll } = useMenuTag()
+const { closeAll } = useSiderBar()
 
 closeAll()
 ```
@@ -94,7 +118,7 @@ closeAll()
 关闭指定索引位置的右侧所有标签页。
 
 ```ts
-const { closeRight } = useMenuTag()
+const { closeRight } = useSiderBar()
 
 closeRight(1) // 关闭索引位置为 `1` 的右侧所有标签页
 closeRight('/echart') // 关闭 key 为 `/echart` 的右侧所有标签页
@@ -106,7 +130,7 @@ closeRight({ MenuTagOptions }) // 关闭具体的右侧所有标签页
 关闭指定索引位置的左侧所有标签页。
 
 ```ts
-const { closeLeft } = useMenuTag()
+const { closeLeft } = useSiderBar()
 
 closeRight(1) // 关闭索引位置为 `1` 的左侧所有标签页
 closeRight('/echart') // 关闭 key 为 `/echart` 的左侧所有标签页
@@ -118,7 +142,7 @@ closeRight({ MenuTagOptions }) // 关闭具体的左侧所有标签页
 关闭除了当前索引标签的所有标签页.
 
 ```ts
-const { closeOther } = useMenuTag()
+const { closeOther } = useSiderBar()
 
 closeRight(1) // 关闭索引位置为 `1` 以外的所有标签页
 closeRight('/echart') // 关闭 key 为 `/echart` 以外的所有标签页
@@ -133,7 +157,7 @@ closeRight({ MenuTagOptions }) // 关闭具体以外的所有标签页
 - false: 不可关闭
 
 ```ts
-const { checkCloseRight } = useMenuTag()
+const { checkCloseRight } = useSiderBar()
 
 checkCloseRight(1) // 索引位置为 `1` 的右侧是否还有可以被关闭的标签
 checkCloseRight('/echart') // key 为 `/echart` 的右侧是否还有可以被关闭的标签
@@ -148,9 +172,136 @@ checkCloseRight({ MenuTagOptions }) //具体标签项的右侧是否还有可以
 - false: 不可关闭
 
 ```ts
-const { checkCloseLeft } = useMenuTag()
+const { checkCloseLeft } = useSiderBar()
 
 checkCloseLeft(1) // 索引位置为 `1` 的左侧是否还有可以被关闭的标签
 checkCloseLeft('/echart') // key 为 `/echart` 的左侧是否还有可以被关闭的标签
 checkCloseLeft({ MenuTagOptions }) //具体标签项的左侧是否还有可以被关闭的标签
+```
+
+## useSpinning
+
+### reload
+
+重新加载当前页面。并且触发加载动画。
+
+```ts
+import { useSpinning } from '@/hooks/template'
+
+const { reload } = useSpinning()
+
+reload(800) // 重新加载当前页面，延迟 800ms
+```
+
+### openSpin, closeSpin
+
+打开或者关闭内容区域加载动画。不会刷新当前页面。
+
+```ts
+import { useSpinning } from '@/hooks/template'
+
+const { openSpin, closeSpin } = useSpinning()
+
+openSpin() // 打开内容区域加载动画
+closeSpin() // 关闭内容区域加载动画
+```
+
+## useTheme
+
+### getAppTheme
+
+获取当前应用的主题。并且主题名称会自动获取当前语言环境下的名称。
+
+```ts
+import { useTheme } from '@/hooks/template'
+
+const { getAppTheme } = useTheme()
+
+getAppTheme() // 获取当前应用的主题: { theme: true | false, themeLabel: '主题名称' }
+```
+
+### changeDarkTheme
+
+切换至暗黑主题。
+
+```ts
+import { useTheme } from '@/hooks/template'
+
+const { changeDarkTheme } = useTheme()
+
+changeDarkTheme() // 切换至暗黑主题
+```
+
+### changeLightTheme
+
+切换至明亮主题。
+
+```ts
+import { useTheme } from '@/hooks/template'
+
+const { changeLightTheme } = useTheme()
+
+changeLightTheme() // 切换至明亮主题
+```
+
+### toggleTheme
+
+切换至暗黑主题或者明亮主题。
+
+```ts
+import { useTheme } from '@/hooks/template'
+
+const { toggleTheme } = useTheme()
+
+toggleTheme() // 切换至暗黑主题或者明亮主题
+```
+
+## useWatermark
+
+### setWatermarkContent
+
+设置水印内容。
+
+```ts
+import { useWatermark } from '@/hooks/template'
+
+const { setWatermarkContent } = useWatermark()
+
+setWatermarkContent('水印内容') // 设置水印内容
+```
+
+### showWatermark
+
+显示水印。
+
+```ts
+import { useWatermark } from '@/hooks/template'
+
+const { showWatermark } = useWatermark()
+
+showWatermark() // 显示水印
+```
+
+### hiddenWatermark
+
+隐藏水印。
+
+```ts
+import { useWatermark } from '@/hooks/template'
+
+const { hiddenWatermark } = useWatermark()
+
+hiddenWatermark() // 隐藏水印
+```
+
+### toggleWatermark
+
+切换水印显示状态。
+
+```ts
+import { useWatermark } from '@/hooks/template'
+
+const { toggleWatermark } = useWatermark()
+
+toggleWatermark() // 切换水印显示状态
 ```

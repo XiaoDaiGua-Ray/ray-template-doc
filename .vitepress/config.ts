@@ -219,7 +219,28 @@ export default defineConfig({
                 },
                 {
                   text: 'utils 工具包',
-                  link: '/ray-template-docs/dev/utils.md',
+                  items: [
+                    {
+                      text: 'basic 基础工具包',
+                      link: '/ray-template-docs/dev/utils/basic.md',
+                    },
+                    {
+                      text: 'cache 缓存',
+                      link: '/ray-template-docs/dev/utils/cache.md',
+                    },
+                    {
+                      text: 'dom 工具包',
+                      link: '/ray-template-docs/dev/utils/element.md',
+                    },
+                    {
+                      text: '基础运算工具包',
+                      link: '/ray-template-docs/dev/utils/precision.md',
+                    },
+                    {
+                      text: 'vue3.x 相关工具包',
+                      link: '/ray-template-docs/dev/utils/vue.md',
+                    },
+                  ],
                 },
               ],
             },
@@ -236,6 +257,10 @@ export default defineConfig({
                     {
                       text: '模板专属 hooks',
                       link: '/ray-template-docs/advanced/hooks/template.md',
+                    },
+                    {
+                      text: '模板组件、NaiveUI 组件 hooks',
+                      link: '/ray-template-docs/advanced/hooks/components.md',
                     },
                   ],
                 },
