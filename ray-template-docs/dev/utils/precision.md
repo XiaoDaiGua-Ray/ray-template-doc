@@ -9,7 +9,7 @@
 判断是否是 currency 对象。
 
 ```ts
-import { isCurrency } from '@/utils/precision'
+import { isCurrency } from '@/utils'
 import currency from 'currency.js'
 
 isCurrency(0.1) // false
@@ -21,7 +21,7 @@ isCurrency(currency(0.1)) // true
 格式化 currency 对象。
 
 ```ts
-import { format } from '@/utils/precision'
+import { format } from '@/utils'
 
 format(0.1) // 0.1
 ```
@@ -31,7 +31,7 @@ format(0.1) // 0.1
 加法运算。支持多个参数。
 
 ```ts
-import { add, format } from '@/utils/precision'
+import { add, format } from '@/utils'
 
 format(add(0.1, 0.2)) // 0.3
 format(add(0.1, 0.2, 0.3)) // 0.6
@@ -42,7 +42,7 @@ format(add(0.1, 0.2, 0.3)) // 0.6
 减法运算。支持多个参数。
 
 ```ts
-import { subtract, format } from '@/utils/precision'
+import { subtract, format } from '@/utils'
 
 format(subtract(0.3, 0.2)) // 0.1
 format(subtract(0.3, 0.2, 0.1)) // 0
@@ -53,7 +53,7 @@ format(subtract(0.3, 0.2, 0.1)) // 0
 乘法运算。支持多个参数。
 
 ```ts
-import { multiply, format } from '@/utils/precision'
+import { multiply, format } from '@/utils'
 
 format(multiply(0.1, 0.2)) // 0.02
 format(multiply(0.1, 0.2, 0.3)) // 0.006
@@ -64,7 +64,7 @@ format(multiply(0.1, 0.2, 0.3)) // 0.006
 除法运算。支持多个参数。
 
 ```ts
-import { divide, format } from '@/utils/precision'
+import { divide, format } from '@/utils'
 
 format(divide(0.3, 0.2)) // 1.5
 format(divide(0.3, 0.2, 0.1)) // 15
@@ -75,7 +75,7 @@ format(divide(0.3, 0.2, 0.1)) // 15
 分配运算。将一个值按照比例分配给多个值。
 
 ```ts
-import { distribute } from '@/utils/precision'
+import { distribute } from '@/utils'
 
 format(distribute(0, 1)) // [0]
 format(distribute(1, 1)) // [1]

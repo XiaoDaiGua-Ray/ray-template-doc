@@ -7,7 +7,7 @@
 可以允许在 `props` 声明的方法拥有 `ts` 类型提示。
 
 ```tsx
-import { call } from '@/utils/vue'
+import { call } from '@/utils'
 
 import type { PropType } from 'vue'
 import type { MaybeArray } from '@/types/modules/utils'
@@ -65,7 +65,7 @@ export function watchEffectWithTarget<T extends AnyFC>(
 渲染节点。可以不用关心节点的类型，直接渲染。
 
 ```tsx
-import { renderNode } from '@/utils/vue'
+import { renderNode } from '@/utils'
 
 const Icon = renderNode(<div></div>)
 const Icon2 = renderNode(null, {
@@ -78,7 +78,7 @@ const Icon2 = renderNode(null, {
 获取 `ref dom` 或者 `dom`。
 
 ```ts
-import { unrefElement } from '@/utils/vue'
+import { unrefElement } from '@/utils'
 
 const refDom = ref(null)
 
@@ -90,7 +90,7 @@ const dom = unrefElement(refDom)
 基于 `watchEffect` 实现的副作用函数，可以在副作用函数卸载时，自动停止监听。
 
 ```ts
-import { watchEffectWithTarget } from '@/utils/vue'
+import { watchEffectWithTarget } from '@/utils'
 import { watchEffect, watch, ref } from 'vue'
 
 const demo = ref(0)

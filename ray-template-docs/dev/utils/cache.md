@@ -5,7 +5,7 @@
 判断缓存中是否存在某个值。
 
 ```ts
-import { hasStorage } from '@/utils/cache'
+import { hasStorage } from '@/utils'
 
 hasStorage('key', 'sessionStorage') // true
 hasStorage('key', 'localStorage') // true
@@ -16,7 +16,7 @@ hasStorage('key', 'localStorage') // true
 设置缓存。
 
 ```ts
-import { setStorage } from '@/utils/cache'
+import { setStorage } from '@/utils'
 
 setStorage('key', 'value', 'sessionStorage')
 setStorage('key', 'value', 'localStorage')
@@ -27,7 +27,7 @@ setStorage('key', 'value', 'localStorage')
 获取缓存。
 
 ```ts
-import { getStorage } from '@/utils/cache'
+import { getStorage } from '@/utils'
 
 getStorage('key', 'sessionStorage')
 getStorage('key', 'localStorage')
@@ -39,7 +39,7 @@ getStorage('key', 'sessionStorage', 'value') // 如果缓存中不存在，则�
 删除缓存。
 
 ```ts
-import { removeStorage } from '@/utils/cache'
+import { removeStorage } from '@/utils'
 
 removeStorage('key', 'sessionStorage')
 removeStorage('key', 'localStorage')

@@ -229,8 +229,12 @@ export default defineConfig({
                       link: '/ray-template-docs/dev/utils/cache.md',
                     },
                     {
-                      text: 'dom 工具包',
+                      text: 'element 工具包',
                       link: '/ray-template-docs/dev/utils/element.md',
+                    },
+                    {
+                      text: 'dom 工具包',
+                      link: '/ray-template-docs/dev/utils/dom.md',
                     },
                     {
                       text: '基础运算工具包',
@@ -252,7 +256,7 @@ export default defineConfig({
                   items: [
                     {
                       text: '全局 hooks',
-                      link: '/ray-template-docs/advanced/hooks/app.md',
+                      link: '/ray-template-docs/advanced/hooks/web.md',
                     },
                     {
                       text: '模板专属 hooks',
