@@ -102,11 +102,12 @@ import { useDomToImage } from '@/hooks/web'
 const domRef = ref<HTMLElement>()
 
 const { create } = useDomToImage(domRef, {
-  imageType: 'jpeg', //   'svg' | 'png' | 'jpeg' | 'blob' | 'pixelData'，默认 jpeg
+  imageType: 'jpeg', // 默认 jpeg，'svg' | 'png' | 'jpeg' | 'blob' | 'pixelData'
   beforeCreate: (element) => {},
-  created: (element, result) => {},
-  createdError: (element, error) => {},
-  finally: (element) => {},
+  created: (result, element) => {},
+  createdError: (error) => {},
+  finally: () => {},
+  // 一些 dom-to-image 的配置项。与官方保持一致，以上为拓展的配置项
 })
 </script>
 ```
@@ -131,5 +132,8 @@ import { ref } from 'vue'
 import { usePrint } from '@/hooks/web'
 
 const domRef = ref<HTMLElement>()
+const { print } = usePrint(domeRef, {
+  // 一些 print-js 的配置项
+})
 </script>
 ```
