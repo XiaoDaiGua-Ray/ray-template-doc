@@ -3,6 +3,9 @@ name: ray-template-doc documents deploy
 
 on: [push, pull_request]
 
+permissions:
+  contents: write
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
