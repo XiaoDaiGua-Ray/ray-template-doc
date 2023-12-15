@@ -83,3 +83,53 @@ const { width, height, isTabletOrSmaller } = useDevice()
 :::tip
 允许在非 `setup` 环境使用 `router`。但是在使用的时候会有 `HMR` 报错的问题，可能会有点影响体验，不太推荐使用。
 :::
+
+## useDomToImage
+
+基于 `dom-to-image` 拓展，允许传递 `ref dom` 与额外的配置项。其余的使用方法与官方保持一致。
+
+```vue
+<template>
+  <div ref="domRef">
+    <div>hello world</div>
+  </div>
+  <button @click="create">点击下载</button>
+</template>
+<script lang="ts" setup>
+import { ref } from 'vue'
+import { useDomToImage } from '@/hooks/web'
+
+const domRef = ref<HTMLElement>()
+
+const { create } = useDomToImage(domRef, {
+  imageType: 'jpeg', //   'svg' | 'png' | 'jpeg' | 'blob' | 'pixelData'，默认 jpeg
+  beforeCreate: (element) => {},
+  created: (element, result) => {},
+  createdError: (element, error) => {},
+  finally: (element) => {},
+})
+</script>
+```
+
+## usePrint
+
+基于 `print-js` 拓展，允许传递 `ref dom` 与额外的配置项。其余的使用方法与官方保持一致。
+
+:::tip
+如果是需要直接打印元素，不建议直接使用该方法。可以使用 [`printDom`](/ray-template-docs/dev/utils/dom.html) 方法，避免一些奇奇怪怪的问题。
+:::
+
+```vue
+<template>
+  <div ref="domRef">
+    <div>hello world</div>
+  </div>
+  <button @click="print">点击打印</button>
+</template>
+<script lang="ts" setup>
+import { ref } from 'vue'
+import { usePrint } from '@/hooks/web'
+
+const domRef = ref<HTMLElement>()
+</script>
+```
