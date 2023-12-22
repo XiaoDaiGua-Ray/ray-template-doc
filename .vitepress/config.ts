@@ -252,6 +252,10 @@ export default defineConfig({
               text: '进阶',
               items: [
                 {
+                  text: 'ts 类型',
+                  link: '/ray-template-docs/advanced/types.md',
+                },
+                {
                   text: '常用 hooks',
                   items: [
                     {
