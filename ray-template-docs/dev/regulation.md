@@ -7,8 +7,8 @@
 使用 props 作为自定义事件这个操作并不是特立独行，在很多出名的 `ui` 库都采用了该方式，例如 `naive ui` 就是采用的方法。下面就演示如何使用该技巧：
 
 ```tsx
-import { call } from '@/utils/vue/index'
-import { completeSize } from '@/utils/element'
+import { call } from '@/utils'
+import { completeSize } from '@/utils'
 
 import type { PropType } from 'vue'
 import type { MaybeArray } from '@/types/modules/utils'
