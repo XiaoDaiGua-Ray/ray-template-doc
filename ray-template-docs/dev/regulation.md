@@ -11,7 +11,7 @@ import { call } from '@/utils'
 import { completeSize } from '@/utils'
 
 import type { PropType } from 'vue'
-import type { MaybeArray } from '@/types/modules/utils'
+import type { MaybeArray } from '@/types'
 
 const MyComponent = defineComponent({
   name: 'MyComponent',

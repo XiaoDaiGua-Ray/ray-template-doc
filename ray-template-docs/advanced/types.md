@@ -7,7 +7,7 @@
 从类型中挑选匹配的属性名
 
 ```ts
-import type { ConditionalKeys } from '@/types/modules/helper'
+import type { ConditionalKeys } from '@/types'
 
 interface Foo {
   a: string
@@ -25,7 +25,7 @@ type FooKeys2 = ConditionalKeys<Foo, string | number> // 'a' | 'b'
 从类型中挑选匹配的属性
 
 ```ts
-import type { ConditionalPick } from '@/types/modules/helper'
+import type { ConditionalPick } from '@/types'
 
 interface Foo {
   a: string
@@ -43,7 +43,7 @@ type FooKeys2 = ConditionalPick<Foo, string | number> // { a: string, b: number 
 从类型中排除匹配的类型
 
 ```ts
-import type { ConditionalExclude } from '@/types/modules/helper'
+import type { ConditionalExclude } from '@/types'
 
 interface Foo {
   a: string
@@ -61,7 +61,7 @@ type FooKeys2 = ConditionalExclude<Foo, string | number> // { c: boolean }
 任意类型的对象
 
 ```ts
-import type { Recordable } from '@/types/modules/helper'
+import type { Recordable } from '@/types'
 
 const foo: Recordable = {
   a: 1,
@@ -84,7 +84,7 @@ const bar: Recordable<number> = {
 获取对象的值类型
 
 ```ts
-import type { ValueOf } from '@/types/modules/helper'
+import type { ValueOf } from '@/types'
 
 interface Foo {
   a: string
@@ -100,7 +100,7 @@ type FooValue = ValueOf<Foo> // string | number | boolean
 移除类型的只读属性
 
 ```ts
-import type { Mutable } from '@/types/modules/helper'
+import type { Mutable } from '@/types'
 
 interface Foo {
   readonly a: string
@@ -116,7 +116,7 @@ type FooValue = Mutable<Foo> // { a: string, b: number, c: boolean }
 递归移除类型的只读
 
 ```ts
-import type { DeepMutable } from '@/types/modules/helper'
+import type { DeepMutable } from '@/types'
 
 interface Foo {
   readonly a: string
@@ -137,7 +137,7 @@ type FooValue = DeepMutable<Foo> // { a: string, b: number, c: boolean, d: { e: 
 获取函数返回值的 Promise 类型
 
 ```ts
-import type { ReturnPromiseType } from '@/types/modules/helper'
+import type { ReturnPromiseType } from '@/types'
 
 async function foo() {
   return 1

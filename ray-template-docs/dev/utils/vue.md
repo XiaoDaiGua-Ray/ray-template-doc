@@ -10,7 +10,7 @@
 import { call } from '@/utils'
 
 import type { PropType } from 'vue'
-import type { MaybeArray } from '@/types/modules/utils'
+import type { MaybeArray } from '@/types'
 
 export default defineComponent({
   props: {
@@ -40,7 +40,7 @@ export default defineComponent({
 import { effectDispose } from './effectDispose'
 
 import type { WatchOptionsBase } from 'vue'
-import type { AnyFC } from '@/types/modules/utils'
+import type { AnyFC } from '@/types'
 
 /**
  *

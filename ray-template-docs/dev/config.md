@@ -276,7 +276,7 @@ export const DAYJS_LOCAL_MAP: DayjsLocalMap = {
 ### axios 公共配置项
 
 ```ts
-import type { AxiosConfig } from '@/types/modules/appConfig'
+import type { AxiosConfig } from '@/types'
 
 /** axios 相关配置 */
 export const AXIOS_CONFIG: AxiosConfig = {
