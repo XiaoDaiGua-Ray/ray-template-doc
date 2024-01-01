@@ -8,6 +8,7 @@
 2. 点击下载主题
 3. 选择 json 类型，然后复制
 4. 在 src/echart-themes 包中创建对应的 json 文件，文件名为主题名称
+5. 记得更改 `backgroundColor` 为 `transparent`，否则会有背景色。如果你需要，则无需更改
 
 :::warning
 如果获取主题包因为命名错误、重复、主题包格式错误，模板会自动回退到 `echart` 默认主题配色。
