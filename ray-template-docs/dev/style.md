@@ -30,17 +30,17 @@
 > 更具当前主题切换样式
 
 ```scss
-.global-seach--dark {
+.global-search--dark {
   @include useAppTheme('dark') {
-    & .global-seach__card {
+    & .global-search__card {
       background-color: #242424;
     }
   }
 }
 
-.global-seach--light {
+.global-search--light {
   @include useAppTheme('light') {
-    & .global-seach__card {
+    & .global-search__card {
       background-color: #f9f9f9;
     }
   }

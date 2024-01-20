@@ -15,7 +15,7 @@ hero:
 features:
   - icon: 💡
     title: 最新技术
-    details: vite4.x vue3.x pinia tsx 等最新技术栈
+    details: vite5.x vue3.x pinia tsx 等最新技术栈
   - icon: ⚡️
     title: 轻量快速的热重载
     details: 无论应用程序大小如何，都始终极快的模块热替换（HMR）

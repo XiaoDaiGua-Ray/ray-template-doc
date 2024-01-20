@@ -1,10 +1,10 @@
 # 项目配置项
 
 :::tip 备注
-项目的配置区分为 `cfg` 与 `appConfig` 两种。`cfg` 依赖 `appConfig` 下的配置。所有配置项都提供了完整的类型。该配置项文档可能会落后于项目实际开放的配置能力，请以实际项目为准。
+项目的配置区分为 `vite.custom.config` 与 `appConfig` 两种。`vite.custom.config` 依赖 `appConfig` 下的配置。所有配置项都提供了完整的类型。该配置项文档可能会落后于项目实际开放的配置能力，请以实际项目为准。
 :::
 
-# cfg.ts 配置项
+# vite.custom.config.ts 配置项
 
 > 该配置项有一些属性会被暴露给全局，可以使用 `__APP_CFG__` 访问。
 
@@ -167,9 +167,10 @@ export const APP_MENU_CONFIG: Readonly<AppMenuConfig> = {
 
 ```ts
 export const APP_CATCH_KEY = {
-  signin: 'signin', // 登陆信息缓存 key
+  signing: 'signing', // 登陆信息缓存 key
   localeLanguage: 'localeLanguage', // 国际化默认缓存 key
   token: 'token', // token key
+  appMenuKey: 'menuKey', // 菜单缓存 key
 } as const
 ```
 
@@ -225,6 +226,7 @@ export const APP_THEME: AppTheme = {
    * 地址: <https://www.naiveui.com/zh-CN/dark/docs/customize-theme#%E4%BD%BF%E7%94%A8-peers-%E4%B8%BB%E9%A2%98%E5%8F%98%E9%87%8F>
    */
   APP_NAIVE_UI_THEME_OVERRIDES: {},
+  echartTheme: 'macarons',
 }
 ````
 

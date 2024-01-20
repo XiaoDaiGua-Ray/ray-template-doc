@@ -23,6 +23,8 @@
     :options="options"
     trigger="manual"
     placement="bottom-start"
+    @select="dropDownSelect"
+    @clickoutside="clickOutside"
   />
 </template>
 <script lang="ts" setup>
@@ -32,7 +34,7 @@ import { ref } from 'vue'
 import { useContextmenuCoordinate } from '@/hooks/components'
 
 const dom = ref<HTMLElement>()
-const { x, y, show } = useContextmenuCoordinate(dom)
+const { x, y, show, updateShow } = useContextmenuCoordinate(dom)
 
 // 菜单选项
 const options = [
@@ -50,10 +52,22 @@ const options = [
   },
   {
     label: '尼克·卡拉威',
-    key: 'nick carraway',
+    key: 'nick caraway',
   },
 ]
+
+const dropDownSelect = (key: string | number, option: DropdownOption) => {
+  console.log(`选中了 ${option.label}`)
+
+  updateShow(false)
+}
+
+const clickOutside = (e: MouseEvent) => {
+  e.preventDefault()
+
+  updateShow(false)
+}
 </script>
 ```
 
-`useContextmenuCoordinate` 方法会自动管理 `NDropdown` 组件的显示与隐藏，你只需要传递 `NDropdown` 组件的 `x`、`y`、`show` 属性即可。
+`useContextmenuCoordinate` 方法会自动管理 `NDropdown` 组件的显示与隐藏。但是，你仍然需要自己处理 `NDropdown` 组件的 `select` 事件与 `clickoutside` 事件。

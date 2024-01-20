@@ -8,7 +8,7 @@
 
 ### navigationTo
 
-区别于 `vue-router` 的导航方式。使用 `useAppNavigation` 可以便捷的进行指定菜单索引、菜单具体项进行导航。
+区别于 `vue-router` 的导航方式。使用 `useAppNavigation` 可以便捷的进行指定菜单索引、`fullPath` 地址、菜单具体项进行导航。
 
 ```ts
 import { useAppNavigation } from '@/hooks/template'
@@ -16,6 +16,7 @@ import { useAppNavigation } from '@/hooks/template'
 const { navigationTo } = useAppNavigation()
 
 navigationTo(1) // 导航到第二个菜单
+navigationTo('fullPath') // 导航到指定的 fullPath 地址
 navigationTo({ AppMenuOption }) // 导航到第二个菜单的第三个子菜单
 ```
 
@@ -60,8 +61,8 @@ import { useMaximize } from '@/hooks/template'
 
 const { isLayoutContentMaximized } = useMaximize()
 
-;(isLayoutContentMaximized) => true // 当前 Layout 的内容区域处于最大化状态
-;(isLayoutContentMaximized) => false // 当前 Layout 的内容区域处于正常尺寸状态
+true // 当前 Layout 的内容区域处于最大化状态
+false // 当前 Layout 的内容区域处于正常尺寸状态
 ```
 
 ### maximize
@@ -75,6 +76,7 @@ const { maximize } = useMaximize()
 
 maximize(true) // 将当前 Layout 的内容区域最大化
 maximize(false) // 将当前 Layout 的内容区域恢复正常尺寸
+maximize(true, MaximizeOptions) // 将当前 Layout 的内容区域最大化，并且可以传递额外的配置项
 ```
 
 ## useSiderBar

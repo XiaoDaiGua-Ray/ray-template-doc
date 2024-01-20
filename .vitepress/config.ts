@@ -252,6 +252,10 @@ export default defineConfig({
               text: '进阶',
               items: [
                 {
+                  text: 'commit 信息检查',
+                  link: '/ray-template-docs/advanced/commit.md',
+                },
+                {
                   text: 'ts 类型',
                   link: '/ray-template-docs/advanced/types.md',
                 },
@@ -271,6 +275,10 @@ export default defineConfig({
                       link: '/ray-template-docs/advanced/hooks/components.md',
                     },
                   ],
+                },
+                {
+                  text: 'CDN 加速',
+                  link: '/ray-template-docs/advanced/cdn.md',
                 },
                 {
                   text: '自定义 echart 主题',
