@@ -307,3 +307,63 @@ const { toggleWatermark } = useWatermark()
 
 toggleWatermark() // 切换水印显示状态
 ```
+
+## useBadge
+
+```ts
+export interface AppMenuExtraOptions {
+  label?: string | number // 不会随着语言环境变化的内容
+  icon?: VNode // 图标
+  type?: TagProps['type'] // 样式风格，默认为 `primary`
+  show?: boolean // 是否显示，默认为 `true`
+  i18nLabel?: string // 会随着语言环境变化的内容
+}
+```
+
+菜单项标记。
+
+### hidden
+
+隐藏菜单项标记。方法会自动忽略尾随 `/`，但是不会忽略中间与开头的 `/`。
+
+```ts
+import { useBadge } from '@/hooks/template'
+
+const { hidden } = useBadge()
+
+hidden('/dashboard') // 隐藏 key 为 `/dashboard` 的菜单项标记
+hidden({ ...AppMenuOption }) // 隐藏具体的菜单项标记
+```
+
+### show
+
+显示菜单项标记。方法会自动忽略尾随 `/`，但是不会忽略中间与开头的 `/`。
+
+```ts
+import { useBadge } from '@/hooks/template'
+
+const { show } = useBadge()
+
+show('/dashboard') // 显示 key 为 `/dashboard` 的菜单项标记
+show({ ...AppMenuOption }) // 显示具体的菜单项标记
+```
+
+### update
+
+更新菜单项标记。方法会自动忽略尾随 `/`，但是不会忽略中间与开头的 `/`。
+
+```ts
+import { useBadge } from '@/hooks/template'
+
+const { update } = useBadge()
+
+update('/dashboard', {
+  ...AppMenuExtraOptions,
+}) // 更新 key 为 `/dashboard` 的菜单项标记为 `10`
+update(
+  { ...AppMenuOption },
+  {
+    ...AppMenuExtraOptions,
+  },
+) // 更新具体的菜单项标记为 `10`
+```

@@ -24,16 +24,16 @@
 `beforeRouteUpdate` => `cancelAllRequest` => `routeUpdate`
 :::
 
-基于取消器 `RequestCanceler` 实现，可以在路由切换的时候，自动取消上一个路由中所有的请求。当然，你可以在请求的时候增加 `needCancel` 配置，手动决定是否可以被手动取消（`false` 则不会被取消）。
+基于取消器 `RequestCanceler` 实现，可以在路由切换的时候，自动取消上一个路由中所有的请求。当然，你可以在请求的时候增加 `cancel` 配置，手动决定是否可以被手动取消（`false` 则不会被取消）。
 
 ```ts
-import { useRequest, useHookPlusRequest, request } from '@/axios/index'
+import { useRequest, useHookPlusRequest, request } from '@/axios'
 
 request<unknown>({
   url: 'https://jsonplaceholder.typicode.com/todos/1',
   method: 'get',
   cancelConfig: {
-    needCancel: true,
+    cancel: true,
   },
 })
 
@@ -44,7 +44,7 @@ useRequest<{
     url: 'https://jsonplaceholder.typicode.com/todos/1',
     method: 'get',
     cancelConfig: {
-      needCancel: true,
+      cancel: true,
     },
   },
   {

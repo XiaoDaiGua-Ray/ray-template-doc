@@ -30,10 +30,10 @@ const axiosCanceler = new RequestCanceler()
 
 ### `cancelConfig` 配置
 
-可以通过配置 `cancelConfig` 属性，手动控制是否需要自动取消该请求。并且有且仅有 `cancelConfig.needCancel` 为 `false` 时，才不会被取消器自动搜集并且取消。
+可以通过配置 `cancelConfig` 属性，手动控制是否需要自动取消该请求。并且有且仅有 `cancelConfig.cancel` 为 `false` 时，才不会被取消器自动搜集并且取消。
 
 ```ts
-import { useRequest, request } from '@/axios/index'
+import { useRequest, request } from '@/axios'
 
 // useRequest 配置
 const { data, loading, run } = useRequest<{
@@ -42,8 +42,8 @@ const { data, loading, run } = useRequest<{
   {
     url: 'https://jsonplaceholder.typicode.com/todos/1',
     method: 'get',
-    cancelConifg: {
-      needCancel: false,
+    cancelConfig: {
+      cancel: false,
     },
   },
   {
@@ -55,8 +55,8 @@ const { data, loading, run } = useRequest<{
 request({
   url: 'https://jsonplaceholder.typicode.com/todos/1',
   method: 'get',
-  cancelConifg: {
-    needCancel: false,
+  cancelConfig: {
+    cancel: false,
   },
 })
 ```
@@ -161,7 +161,7 @@ export const setupResponseErrorInterceptor = () => {
 ```tsx
 import { NCard, NLayout, NSpace, NInput, NButton } from 'naive-ui'
 
-import { useRequest } from '@/axios/index'
+import { useRequest } from '@/axios'
 
 interface JSONPlaceholder {
   completed: boolean
@@ -214,7 +214,7 @@ const RAxiosDemo = defineComponent({
 ```tsx
 import { NCard, NLayout, NSpace, NInput, NButton } from 'naive-ui'
 
-import { useHookPlusRequest, request } from '@/axios/index'
+import { useHookPlusRequest, request } from '@/axios'
 
 interface JSONPlaceholder {
   completed: boolean

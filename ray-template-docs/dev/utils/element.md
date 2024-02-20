@@ -1,15 +1,15 @@
 # Element 相关工具方法
 
-## addClass
+## setClass
 
 给元素添加 class。允许按照 `空格` 分割添加多个 class。
 
 ```ts
-import { addClass } from '@/utils'
+import { setClass } from '@/utils'
 
-addClass(document.body, 'class')
-addClass(refDom, 'class')
-addClass(dom, 'class other-class other-class-2')
+setClass(document.body, 'class')
+setClass(refDom, 'class')
+setClass(dom, 'class other-class other-class-2')
 ```
 
 ## removeClass
@@ -36,17 +36,17 @@ hasClass(refDom, 'class') // true
 hasClass(refDom, 'class other-class other-class-2') // true
 ```
 
-## addStyle
+## setStyle
 
 给元素添加 style。允许按照 `;` 分割添加多个 style。
 
 ```ts
-import { addStyle } from '@/utils'
+import { setStyle } from '@/utils'
 
-addStyle(document.body, 'color: red')
-addStyle(refDom, 'color: red')
-addStyle(dom, 'color: red; font-size: 16px')
-addStyle(dom, { color: 'red', fontSize: '16px' })
+setStyle(document.body, 'color: red')
+setStyle(refDom, 'color: red')
+setStyle(dom, 'color: red; font-size: 16px')
+setStyle(dom, { color: 'red', fontSize: '16px' })
 ```
 
 ## removeStyle
