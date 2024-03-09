@@ -207,7 +207,16 @@ export default defineConfig({
                 },
                 {
                   text: '自定义指令',
-                  link: '/ray-template-docs/dev/directive.md',
+                  items: [
+                    {
+                      text: '创建自定义指令',
+                      link: '/ray-template-docs/dev/utils/directive/create-directive.md',
+                    },
+                    {
+                      text: '已有自定义指令',
+                      link: '/ray-template-docs/dev/utils/directive/directive.md',
+                    },
+                  ],
                 },
                 {
                   text: '构建',
@@ -313,6 +322,10 @@ export default defineConfig({
             {
               text: '常见问题',
               items: [
+                {
+                  text: 'HMR 热更新问题',
+                  link: '/ray-template-docs/common-problem/hmr.md',
+                },
                 {
                   text: '缓存',
                   link: '/ray-template-docs/common-problem/keep-alive.md',

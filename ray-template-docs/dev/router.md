@@ -189,14 +189,14 @@ interface AppRouteMeta {
 
 ## 工具函数
 
-方法存放于 `src/router/helper/routerCopilot.ts` 与 `src/router/helper/useVueRouter.ts` 中。
+方法存放于 `src/router/utils/routerCopilot.ts` 与 `src/router/utils/useVueRouter.ts` 中。
 
 ```ts
 import {
   validRole,
   validMenuItemShow,
   redirectRouterToDashboard,
-} from '@/router/helper/routerCopilot'
+} from '@/router/utils/routerCopilot'
 ```
 
 - ### validRole
@@ -214,7 +214,7 @@ import {
 - ### useVueRouter
 
 ```ts
-import { useVueRouter } from '@/router/helper/useVueRouter'
+import { useVueRouter } from '@/router/utils/useVueRouter'
 ```
 
 > 允许在 setup 环境外使用路由方法。但是该方法可能会导致 HMR 的时候出现加载报错的提示（手动刷新一下就好），如果你确定使用环境在 setup 环境中时，还是建议使用官方提供方法。

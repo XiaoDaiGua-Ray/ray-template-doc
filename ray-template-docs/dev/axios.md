@@ -23,7 +23,7 @@
 ### 使用方法
 
 ```ts
-import RequestCanceler from '@/axios/helper/canceler'
+import RequestCanceler from '@/axios/utils/canceler'
 
 const axiosCanceler = new RequestCanceler()
 ```
@@ -75,9 +75,9 @@ request({
 
 ```ts
 // 导入注入器
-import { useAxiosInterceptor } from '@/axios/helper/interceptor'
+import { useAxiosInterceptor } from '@/axios/utils/interceptor'
 // 导入设置请求头方法
-import { appendRequestHeaders } from '@/axios/helper/axiosCopilot'
+import { appendRequestHeaders } from '@/axios/utils/axiosCopilot'
 
 import type {
   RequestInterceptorConfig,
@@ -119,7 +119,7 @@ export const setupRequestErrorInterceptor = () => {
 演示响应注入。并且提供 `ResponseInterceptorConfig` 类型工具函数。
 
 ```ts
-import { useAxiosInterceptor } from '@/axios/helper/interceptor'
+import { useAxiosInterceptor } from '@/axios/utils/interceptor'
 
 import type {
   ResponseInterceptorConfig,
