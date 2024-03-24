@@ -261,6 +261,10 @@ export default defineConfig({
               text: '进阶',
               items: [
                 {
+                  text: '单元测试',
+                  link: '/ray-template-docs/advanced/vitest.md',
+                },
+                {
                   text: 'commit 信息检查',
                   link: '/ray-template-docs/advanced/commit.md',
                 },
