@@ -32,10 +32,6 @@ const rayTemplateDocs: SidebarItemOptions = [
             link: '/ray-template-docs/dev/file.md',
           },
           {
-            text: '流程',
-            link: '/ray-template-docs/dev/process.md',
-          },
-          {
             text: '项目配置项',
             link: '/ray-template-docs/dev/config.md',
           },
