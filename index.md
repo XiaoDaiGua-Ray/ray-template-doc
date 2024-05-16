@@ -13,8 +13,8 @@ hero:
       text: 组件
       link: /docs/components/basic/description
     - theme: alt
-      text: 参考
-      link: /docs/refer/env-configuration.html
+      text: hooks
+      link: /docs/hooks/description
   image:
     src: /logo.svg
     alt: Ray Template
