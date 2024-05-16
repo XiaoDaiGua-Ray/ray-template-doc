@@ -52,7 +52,6 @@ import 'your css or scss file'
 // components
 import { NButton } from 'naive-ui'
 import { RChart } from '@/components'
-import { BTablePro } from '@/business-components'
 
 // utils and hooks
 import { formatDate, downloadAnyFile } from '@/utils'

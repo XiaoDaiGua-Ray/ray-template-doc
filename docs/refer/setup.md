@@ -57,7 +57,6 @@ pnpm test:ui
 │ ├─ app-config
 │ ├─ assets
 │ ├─ axios
-│ ├─ business-components
 │ ├─ components
 │ ├─ dayjs
 │ ├─ directives

@@ -2,10 +2,6 @@
 
 把一堆过滤条件组件收起来，让界面看着舒服一点。
 
-:::tip
-业务开发时，建议使用 [BCollapse](/docs/components/business/b-collapse.html) 组件。
-:::
-
 ## 基础使用
 
 :::details code

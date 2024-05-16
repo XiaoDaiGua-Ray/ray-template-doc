@@ -2,10 +2,6 @@
 
 分页器 `hooks`。
 
-:::tip
-业务开发时，如果是需要结合表格，建议直接使用 [BTablePro](/docs/components/business/b-table-pro.html) 组件。
-:::
-
 ## 返回值
 
 | 名称            | 类型                                        | 说明               |
