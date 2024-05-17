@@ -2,7 +2,48 @@ import type { SidebarItemOptions } from './types'
 
 const components: SidebarItemOptions = []
 
-const template: SidebarItemOptions = []
+const template: SidebarItemOptions = [
+  {
+    text: 'useAppNavigation',
+    link: 'useAppNavigation',
+  },
+  {
+    text: 'useAppRoot',
+    link: 'useAppRoot',
+  },
+  {
+    text: 'useBadge',
+    link: 'useBadge',
+  },
+  {
+    text: 'useContentScroll',
+    link: 'useContentScroll',
+  },
+  {
+    text: 'useMaximize',
+    link: 'useMaximize',
+  },
+  {
+    text: 'useSiderBar',
+    link: 'useSiderBar',
+  },
+  {
+    text: 'useSiderScroll',
+    link: 'useSiderScroll',
+  },
+  {
+    text: 'useSpinning',
+    link: 'useSpinning',
+  },
+  {
+    text: 'useTheme',
+    link: 'useTheme',
+  },
+  {
+    text: 'useWatermark',
+    link: 'useWatermark',
+  },
+]
 
 const web: SidebarItemOptions = [
   {
