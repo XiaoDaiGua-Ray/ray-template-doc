@@ -15,6 +15,9 @@ hero:
     - theme: alt
       text: hooks
       link: /docs/hooks/description
+    - theme: alt
+      text: directives
+      link: /docs/directives/copy
   image:
     src: /logo.svg
     alt: Ray Template

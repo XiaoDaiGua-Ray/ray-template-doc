@@ -37,6 +37,10 @@ export default defineConfig({
         link: '/docs/hooks/description.md',
       },
       {
+        text: 'directives',
+        link: '/docs/directives/copy.md',
+      },
+      {
         text: '参考',
         items: [
           {

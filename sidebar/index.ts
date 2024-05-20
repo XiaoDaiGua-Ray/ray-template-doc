@@ -3,6 +3,7 @@ import { components } from './components'
 import { refer } from './refer'
 import { hooks } from './hooks'
 import { rayTemplateDocs } from './ray-template-docs'
+import { directives } from './directives'
 
 import type { Sidebar } from './types'
 
@@ -17,6 +18,8 @@ const sidebar: Sidebar = {
   '/docs/hooks/': hooks,
   // template docs
   '/ray-template-docs/': rayTemplateDocs,
+  // directives 指令
+  '/docs/directives/': directives,
 }
 
 export { sidebar }
