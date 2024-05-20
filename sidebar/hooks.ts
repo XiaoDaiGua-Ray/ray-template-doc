@@ -1,6 +1,11 @@
 import type { SidebarItemOptions } from './types'
 
-const components: SidebarItemOptions = []
+const components: SidebarItemOptions = [
+  {
+    text: 'useContextmenuCoordinate',
+    link: 'useContextmenuCoordinate',
+  },
+]
 
 const template: SidebarItemOptions = [
   {
