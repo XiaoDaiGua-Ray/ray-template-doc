@@ -1,0 +1,11 @@
+allowBuilds:
+  '@parcel/watcher': true
+  esbuild: true
+
+peerDependencyRules:
+  ignoreMissing:
+    - '@algolia/client-search'
+    - search-insights
+
+overrides:
+  vite: 6.4.3
