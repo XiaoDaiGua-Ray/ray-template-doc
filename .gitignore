@@ -27,3 +27,6 @@ visualizer.*
 yarn-*.*
 yarn.*
 pnpm.*
+
+# VitePress generated files
+.vitepress/cache/
